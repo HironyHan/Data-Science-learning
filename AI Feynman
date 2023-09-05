@@ -1,2 +1,16 @@
-1. NP-hard problem
-  
+1.NP-hard problem
+  relationship with NP problem
+  what is NP problem and P problem
+  what is the relationship between P problem and Polynomial Time
+
+2.Sparse Regression
+  usually using Lasso(L1), Ridge(L2), Stepwise Regression(suprisingly) and Forward Selection, etc.
+  Tell the difference between L1 and L2: They are deployed as a punishment to avoid the model become too complex and overfitting. 
+    L1 = λ * Σ|θi|; L2 = λ * Σθi^2. L1 can reduce some θ to 0, which is useful to feature selection in high-dimension data. L2 reduce all the θ but not to 0 (Becuase the more close to 0, reduce the same value means less reduce the amount.--the shape of exponential function).
+    L2 help the model's robustness when facing multicollinearity.
+
+3.Genetic Algorithm 
+  Simulating the biology genetic steps. Always choosing the most adaptable individuals and also introducing Mutation for diversity. Repeating the steps until max interate times and getting the results.
+
+4.Get use of Eureqa software
+  Not open source right now. Looking for resources.
