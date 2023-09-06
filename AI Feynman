@@ -14,3 +14,29 @@
 
 4.Get use of Eureqa software
   Not open source right now. Looking for resources.
+
+
+
+
+5.Parse Tree： used to sovle NLP problem. help the machine understand syntax.
+
+6.Algorithms steps: 
+  Dimensional analysis, Polynominal fit, Brute force, train NN, check symmetry? check separable? Equate variables and reduce them, Transform X & y、、
+
+  Dimensional analysis is used to separate the variables and the number itself, for example, you can put all the Dimensional in one equation and the other equation is purely numbers.
+
+  Symmetry means that if you exchange the two variables' positions, the value of the euation will not change.
+
+  This algorithm means to seperate the complex equations into easier ones.
+
+
+
+7.Reverse Polish Notation，RPN
+  eg. (2+4)*(5-1)
+    when using RPN:
+    24+5-1*
+    Some principles: when numbers, directly out. when symbol, add into stack and compare the priority. The lower one wil be pop out. When ), pop all the items in the stack.
+
+8.Avoid overfitting
+  define the winning function to be the one with rms fitting error ϵ < ϵb that has the smallest total description length.
+  DL≡log2N+λlog2[max(1,ϵ/ϵd)]
