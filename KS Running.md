@@ -1,97 +1,65 @@
-\documentclass[9pt]{osa-supplemental-document}
-\setboolean{shortarticle}{false}
+# AIFeynman Project Setup Guide
 
-\title{Key steps for running a AIFeynman project}
-\author{} %leave this blank
-%% DO NOT ADD AUTHOR INFORMATION HERE; IT WILL BE ADDED DURING PRODUCTION
+## Installation
 
-\begin{abstract}
-This is a notebook about how to start from 0 to build a AIFeynman project. Including how to start the program and the potential obstacles. Follow the guideline and start building AIFeynman project.
-\end{abstract}
+The first step is to install the AIFeynman library on your computer. AIFeynman supports Linux or MacOS systems. Follow these steps to set up the project:
 
-\setboolean{displaycopyright}{false} %copyright statement should not display in the  supplemental document
+1. **Build a virtual environment:**
 
-\begin{document}
-
-\maketitle
-
-\section{Installation}
-
-The first step is to install AIFeynman library on the computer. AIFeynman only support Linux or MacOS System.
-\begin{enumerate}
-    \item \textbf{Bulid a virtual environment. }
-    Installing the library "virtualenv" and build a environment.
-    
-    \begin{verbatim}
+    ```bash
     pip install virtualenv
     virtualenv -p python3 feyn
     source feyn/bin/activate
-    \end{verbatim}
-    
-    \item \textbf{Installing the required compiler "gfortran".}
+    ```
 
-    \begin{verbatim}
+2. **Installing the required compiler "gfortran":**
+
+    ```bash
     sudo apt-get update
     sudo apt-get install gfortran
-    \end{verbatim}
-    
-    Open the ~/.bashrc file.
+    ```
 
-    \begin{verbatim}
+    Open the `~/.bashrc` file.
+
+    ```bash
     nano ~/.bashrc
-    \end{verbatim}
-    
-    Add the following lines to your ~/.bashrc file to set environment variables related to.
-    
-    \begin{verbatim}
+    ```
+
+    Add the following lines to your `~/.bashrc` file to set environment variables:
+
+    ```bash
     export FC=gfortran
     export F77=gfortran
-    \end{verbatim}
-    
-    Press Control+X to exit, press Y to save and press enter to exit.
+    ```
 
-    Run the following code to refresh the setting.
-    
-    \begin{verbatim}
+    Press Control+X to exit, press Y to save, and press Enter to exit.
+
+    Run the following code to refresh the settings:
+
+    ```bash
     source ~/.bashrc
-    \end{verbatim}
-    
-    \item \textbf{Installing the required library "numpy" and ipykernel.}
-    
-    \begin{verbatim}
+    ```
+
+3. **Installing the required library "numpy" and ipykernel:**
+
+    ```bash
     pip install numpy
     pip install ipykernel
     python -m ipykernel install --user --name=feyn
-    \end{verbatim}
+    ```
 
-    \item \textbf{Installing the library "AIFeynman".} It is better to get a python version before 3.12.
+4. **Installing the AIFeynman library:**
 
-    \begin{verbatim}
+    It is better to have a Python version before 3.12.
+
+    ```bash
     pip install aifeynman
-    \end{verbatim}
+    ```
 
-    \item \textbf{Opening jupyter notebook to build a python file.}
+5. **Opening Jupyter Notebook to build a Python file:**
 
-    \begin{verbatim}
+    ```bash
     jupyter notebook
-    \end{verbatim}
+    ```
 
-    After entering jupyter notebook, when choosing the new file's type, new a \textbf{feyn} type file. The installation steps are finished.
-    
-\end{enumerate}
-
-
-
-% Bibliography
-%\bibliography{sample}
-
-%Manual citation list
-%\begin{thebibliography}{1}
-%\bibitem{Zhang:14}
-%Y.~Zhang, S.~Qiao, L.~Sun, Q.~W. Shi, W.~Huang, %L.~Li, and Z.~Yang,
- % \enquote{Photoinduced active terahertz metamaterials with nanostructured
-  %vanadium dioxide film deposited by sol-gel method,} Opt. Express \textbf{22},
-  %11070--11078 (2014).
-%\end{thebibliography}
-
-\end{document}
+    After entering Jupyter Notebook, when choosing the new file's type, create a file of type "feyn". The installation steps are finished.
